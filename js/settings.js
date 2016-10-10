@@ -9,7 +9,12 @@
 
 		// Superslides
 
-		$('#slides').superslides('stop');
+		$('#slides').superslides({
+			play: 5000,
+			animation_speed: 2000,
+			animation: 'fade',
+			pagination: false
+		});
 
 		// ====================================================================
 

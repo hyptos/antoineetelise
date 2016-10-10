@@ -101,7 +101,7 @@ section {
 	display: block;
 	margin: 0 auto;
 	position: absolute;
-	top:33%;
+	top:10%;
 	width: 100%;
 	-webkit-transform: translateY(-33%);
 	-moz-transform: translateY(-33%);
