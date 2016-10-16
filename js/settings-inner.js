@@ -5,6 +5,40 @@
 		
 		// ====================================================================
 
+		// Smooth Scroll on Menu Click
+
+		$('.navbar a[href^=#]').on("click",function(){
+			var t= $(this.hash);
+			var t=t.length&&t||$('[name='+this.hash.slice(1)+']');
+			if(t.length){
+				var tOffset=(t.offset().top - 90);
+				$('html,body').animate({scrollTop:tOffset},'slow');
+				return false;
+			}
+		});
+
+		// ====================================================================
+
+		// Owl Carousel
+
+		$("#registry .owl-carousel").owlCarousel({
+			items: 6,
+			itemsDesktop: [1199,5],
+			itemsDesktopSmall: [991,4],
+			itemsTablet: [767,3],
+			slideSpeed: 800
+		});
+
+		// ====================================================================
+
+		// Fancybox
+
+		$('.fancybox').fancybox({
+			openEffect: 'none'
+		});
+
+		// ====================================================================
+
 		// Scroll Reveal
 
 		if ($(window).width() > 767) {

@@ -3,7 +3,33 @@
 
 	$(document).ready(function() {
 		
+		// ====================================================================
 
+		// Navbar position
+
+		$(window).scroll(function(){
+			if ($(this).scrollTop() > $(window).height()) {
+				$('.navbar').addClass('fixed');
+				$('body').css('padding-top', '97px');
+			} else {
+				$('.navbar').removeClass('fixed');
+				$('body').css('padding-top', '0');
+			}
+		});
+		
+		// ====================================================================
+
+		// Smooth Scroll on Menu Click
+
+		$('.navbar a[href^=#]').on("click",function(){
+			var t= $(this.hash);
+			var t=t.length&&t||$('[name='+this.hash.slice(1)+']');
+			if(t.length){
+				var tOffset=(t.offset().top - 90);
+				$('html,body').animate({scrollTop:tOffset},'slow');
+				return false;
+			}
+		});
 
 		// ====================================================================
 
@@ -19,14 +45,30 @@
 		// ====================================================================
 
 		// Countdown
-		
-		//var weddingDate = new Date();
-		//var weddingDate = new Date(weddingDate.getFullYear() + 1, 1 - 1, 1);
+
 		var weddingDate = new Date("October 6, 2017 17:00:00")
 		$(".countdown").countdown({
 			until: weddingDate,
 			format: 'ODHMS'
 		});
+
+		// ====================================================================
+
+		// Owl Carousel
+
+		$("#registry .owl-carousel").owlCarousel({
+			items: 6,
+			itemsDesktop: [1199,5],
+			itemsDesktopSmall: [991,4],
+			itemsTablet: [767,3],
+			slideSpeed: 800
+		});
+
+		// ====================================================================
+
+		// Parallax
+
+		$('.parallax').scrolly({bgParallax: true});
 
 		// ====================================================================
 
@@ -52,6 +94,14 @@
 	           flag = 1;
 	        }
 	    });
+
+		// ====================================================================
+
+		// Fancybox
+
+		$('.fancybox').fancybox({
+			openEffect: 'none'
+		});
 
 		// ====================================================================
 
