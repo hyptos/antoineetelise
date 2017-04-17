@@ -1,6 +1,6 @@
 <?php
 
-$send_to = 'youremail@gmail.com';
+$send_to = 'hyptos974@gmail.com';
 
 $errors         = array();  	// array to hold validation errors
 $data 			= array(); 		// array to pass back data
