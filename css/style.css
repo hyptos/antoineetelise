@@ -34,7 +34,7 @@ h3,h4,h5,h6 {
 }
 
 h6 {
-	color: #e6ba4e;
+    color: #e6ba4e;
 }
 
 a,
@@ -168,6 +168,10 @@ section {
 	background: none !important;
 }
 
+.navbar-default li a{
+	text-align: center;
+}
+
 .dropdown-menu {
 	padding: 0;
 }
@@ -186,14 +190,14 @@ section {
 
 .heading span {
 	border: 0;
-	border-top: 1px solid #e6ba4e;
+    border-top: 1px solid #e6ba4e;
 	display: inline-block;
 	margin: 5px 10px;
 	width: 40px;
 }
 
 .heading i {
-	color: #e6ba4e;
+    color: #e6ba4e;
 }
 
 /* MAIN BANNER
@@ -272,8 +276,8 @@ section {
 }
 
 .social-icons a:hover {
-	border: 1px solid #e6ba4e;
-	color: #e6ba4e;
+    border: 1px solid #e6ba4e;
+    color: #e6ba4e;
 }
 
 /* PEOPLE & ACCOMMODATION
@@ -331,7 +335,7 @@ section {
 }
 
 .post-header span {
-	color: #e6ba4e;
+    color: #e6ba4e;
 }
 
 .post-meta {
@@ -401,7 +405,7 @@ section {
 }
 
 #facts .img-circle {
-	background: #e6ba4e;
+    background: #e6ba4e;
 	height: 213px;
 	padding-top: 60px;
 }
@@ -435,7 +439,7 @@ section {
 =========================================================================================*/
 
 #rsvp {
-	background: #e6ba4e;
+    background: #e6ba4e;
 	border-radius: 8px;
 	color: #222;
 	margin-right: -470px;
