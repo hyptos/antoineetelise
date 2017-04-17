@@ -49,5 +49,6 @@ $data 			= array(); 		// array to pass back data
 		$data['message'] = 'Thank you!';
 	}
 
+
 	// return all our data to an AJAX call
 	echo json_encode($data);
