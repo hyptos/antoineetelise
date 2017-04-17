@@ -29,20 +29,16 @@ $data 			= array(); 		// array to pass back data
     	//If there is no errors, send the email
     	if( empty($errors) ) {
 
-			$subject = 'RSVP Form';
+			$subject = 'Contact Form';
 			$headers = 'From: ' . $send_to . "\r\n" .
 			    'Reply-To: ' . $send_to . "\r\n" .
 			    'X-Mailer: PHP/' . phpversion();
 
         	$message = 'Name: ' . $_POST['inputName'] . '
 
-Email: ' . $_POST['inputEmail'] . '
+            Email: ' . $_POST['inputEmail'];
 
-Guests: ' . $_POST['selectGuests'] . '
-
-Attending: ' . $_POST['selectAttending'];
-
-        	$headers = 'From: RSVP Form' . '<' . $send_to . '>' . "\r\n" . 'Reply-To: ' . $_POST['inputEmail'];
+        	$headers = 'From: Contact Form' . '<' . $send_to . '>' . "\r\n" . 'Reply-To: ' . $_POST['inputEmail'];
 
         	mail($send_to, $subject, $message, $headers);
 
