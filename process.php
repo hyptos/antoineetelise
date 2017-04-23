@@ -36,7 +36,7 @@ $data 			= array(); 		// array to pass back data
 
         	$message = 'Name: ' . $_POST['inputName'] . '
 
-            Email: ' . $_POST['inputEmail'];
+            Email: ' . $_POST['inputEmail'] ."\n" . $_POST['message'];
 
         	$headers = 'From: Contact Form' . '<' . $send_to . '>' . "\r\n" . 'Reply-To: ' . $_POST['inputEmail'];
 

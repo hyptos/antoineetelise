@@ -12,6 +12,7 @@ $(document).ready(function() {
 		var formData = {
 			'inputName' 			: $('input[name=inputName]').val(),
 			'inputEmail' 			: $('input[name=inputEmail]').val(),
+ 			'message'                    : $('#message').val(),
 			'selectGuests' 	        : $('select[name=selectGuests]').val(),
 			'selectAttending' 	    : $('select[name=selectAttending]').val()
 		};
@@ -48,7 +49,6 @@ $(document).ready(function() {
 				} else {
 
 					// ALL GOOD! just show the success message!
-					$('#rsvp form').append('<div class="alert alert-success">' + data.message + '</div>');
 
 					// usually after form submission, you'll want to redirect
 					// window.location = '/thank-you'; // redirect a user to another page
@@ -62,10 +62,14 @@ $(document).ready(function() {
 				// show any errors
 				// best to remove for production
 				console.log(data);
-			});
+			})
 
 		// stop the form from submitting the normal way and refreshing the page
 		event.preventDefault();
+		$('#rsvp button').attr('disabled', 'disabled');
+		$('#rsvp form').delay(400).append('<br /><div class="alert alert-success">Merci :)</div>');
 	});
+
+
 
 });
